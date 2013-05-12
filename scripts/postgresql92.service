@@ -1,3 +1,9 @@
+# /usr/lib/systemd/system/postgresql-9.2.service
+# systemctl enable postgresql92.service
+# systemctl start postgresql92.service
+# systemctl status postgresql92.service
+# systemctl stop postgresql92.service
+
 [Unit]
 Description=PostgreSQL 9.2 database server
 After=syslog.target

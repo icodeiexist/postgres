@@ -1,3 +1,5 @@
+--source http://michael.otacoo.com/postgresql-2/postgres-feature-highlight-hstore
+
 CREATE TABLE products (id serial, characs hstore);
 INSERT INTO products (characs) VALUES ( 'author=>Dave, date=>"Dec 2012", price=>"500",currency=>"dolar"');
 INSERT INTO products (characs) VALUES (hstore(array['author','date','stock'],array['Mike','Nov 2012','200']));
