@@ -1,3 +1,8 @@
+-- in postgresql.conf
+-- log_destination='csvlog'
+-- logging_collector='on'
+-- log_filename='postgresql.log'
+
 CREATE EXTENSION file_fdw;
 CREATE SERVER pglog FOREIGN DATA WRAPPER file_fdw;
 
