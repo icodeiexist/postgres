@@ -8,6 +8,7 @@ Instalación
 #. plproxy
 #. pagila
 #. pgbench
+#. check_postgres
 #. script systemv en nueva instancia
 #. psql
 #. documentación
