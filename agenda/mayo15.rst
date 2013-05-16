@@ -21,7 +21,8 @@ Ambiente del S.O.
 
 .. code-block:: bash
 
-    CREATE DATABASE music ENCODING 'LATIN1' LC_CTYPE 'es_MX' LC_COLLATE 'es_MX' TEMPLATE template0;
+    CREATE DATABASE music ENCODING 'LATIN1' LC_CTYPE 
+               'es_MX' LC_COLLATE 'es_MX' TEMPLATE template0;
 
 Fuente
 
