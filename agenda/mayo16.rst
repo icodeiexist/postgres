@@ -7,7 +7,7 @@ Práctica
 
 - Aumentar la memoria compartida de la instancia en data2 a 600MB
 - Fijar el search path de la base de datos pagila a "$user",public,pagila
-
+- Cambiar el parámetro LC_MESSAGES del usuario postgres a 'en_US' de manera permanente
 
 Instalación
 *************
@@ -16,6 +16,7 @@ Instalación
 #. Consultar la version de postgres
 #. Autocompletado + historia en psql
 #. Listar las bases de datos de manera no interactiva
+#. Desplegado extendido de resultados.
 #. Información extendida de objetos con signo más (+) en psql
 
 Configuración
@@ -59,6 +60,29 @@ Configuración
 
 
 #. Configuración del log de eventos como tabla
+
+Control de accesos
+********************
+
+- Configurar las máquinas virtuales para comunicación externa
+- Los usuarios son globales, los nombres deben ser únicos
+- Los privilegios son manejados con:
+   - GRANT | REVOKE
+   - ALTER
+   - CREATE | DROP ROLE | USER
+   - createuser - dropuser
+- Quien crea un objeto es el dueño del objeto y puede asignar permisos sobre los objetos
+- Cambiar al dueño de un objeto con ALTER (object)
+- El rol PUBLIC es un rol especial, incluye a todos los usuarios
+- Explicar el archivo pg_hba.conf
+
+Ejercicios:
+
+#. Crear usuarios
+   - \du - listar usuarios actuales - roles
+   - createuser -e -s U postgres omnitracs
+      
+
 
 Benchmarks
 ***********
