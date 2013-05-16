@@ -2,10 +2,21 @@
 Agenda Mayo 16
 ########################
 
+Práctica
+**********
+
+- Aumentar la memoria compartida de la instancia en data2 a 600MB
+- Fijar el search path de la base de datos pagila a "$user",public,pagila
+
+
 Instalación
 *************
 
 #. Archivo de servicios
+#. Consultar la version de postgres
+#. Autocompletado + historia en psql
+#. Listar las bases de datos de manera no interactiva
+#. Información extendida de objetos con signo más (+) en psql
 
 Configuración
 ***************
