@@ -31,4 +31,4 @@ CREATE FOREIGN TABLE pglog (
   location text,
   application_name text
 ) SERVER pglog
-OPTIONS ( filename '/var/lib/pgsql/9.2/data/pg_log/pglog.csv', format 'csv' );
+OPTIONS ( filename '/var/lib/pgsql/data2/pg_log/postgresql-Thu.csv', format 'csv' );
