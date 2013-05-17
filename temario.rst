@@ -1,5 +1,5 @@
-Administración de PostgreSQL 30hrs
-==================================
+Administración de PostgreSQL
+==============================
 
 
 El proceso de instalación
@@ -110,7 +110,7 @@ Mantenimiento de rutina
 7. Mantenimiento de archivos de logs
 
 
-Conceptos básicos de generación de logs (historiales) 1hr
+Conceptos básicos de generación de logs (historiales) 
 ---------------------------------------------------------
 
 1. Reporte y registro de errores y eventos
