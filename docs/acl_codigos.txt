@@ -1,0 +1,42 @@
+
+http://www.postgresql.org/docs/current/static/sql-grant.html
+
+Use psql's \dp command to obtain information about existing privileges for tables and columns. For example:
+
+=> \dp mytable
+                              Access privileges
+ Schema |  Name   | Type  |   Access privileges   | Column access privileges 
+--------+---------+-------+-----------------------+--------------------------
+ public | mytable | table | miriam=arwdDxt/miriam | col1:
+                          : =r/miriam             :   miriam_rw=rw/miriam
+                          : admin=arw/miriam        
+(1 row)
+
+The entries shown by \dp are interpreted thus:
+
+rolename=xxxx -- privileges granted to a role
+        =xxxx -- privileges granted to PUBLIC
+
+            r -- SELECT ("read")
+            w -- UPDATE ("write")
+            a -- INSERT ("append")
+            d -- DELETE
+            D -- TRUNCATE
+            x -- REFERENCES
+            t -- TRIGGER
+            X -- EXECUTE
+            U -- USAGE
+            C -- CREATE
+            c -- CONNECT
+            T -- TEMPORARY
+      arwdDxt -- ALL PRIVILEGES (for tables, varies for other objects)
+            * -- grant option for preceding privilege
+
+        /yyyy -- role that granted this privilege
+
+The above example display would be seen by user miriam after creating table mytable and doing:
+
+GRANT SELECT ON mytable TO PUBLIC;
+GRANT SELECT, UPDATE, INSERT ON mytable TO admin;
+GRANT SELECT (col1), UPDATE (col1) ON mytable TO miriam_rw;
+
