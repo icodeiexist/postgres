@@ -49,5 +49,11 @@ confiabilidad
 - panorama general caché de disco
 - explicar commit asíncronos, carga de masiva de datos
 - explicar la generación de segmentos wal y su nomenclatura
+
+respaldo incremental
+*********************
+
+- Fijar wal_max_senders > 0
+- Habilitar conexiones de replicacion desde localhost
 - Hacer un respaldo incremental con recuperación en el tiempo
 
