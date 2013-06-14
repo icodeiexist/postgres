@@ -1,0 +1,8 @@
+#!/bin/bash
+
+DEST_HOST=$1
+DEST_DBCLUSTER=$2
+
+PGCTL=/usr/pgsql-9.2/bin/pg_ctl
+
+ssh -T $DEST_HOST $PGCTL -w -D $DEST_DBCLUSTER start 2>/dev/null 1>/dev/null < /dev/null &
