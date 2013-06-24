@@ -1,0 +1,3 @@
+INSERT into spatial_ref_sys (srid, auth_name, auth_srid, proj4text, srtext) values ( 94914, 'epsg', 4914, '', 'GEOCCS["ITRF92",DATUM["International Terrestrial Reference Frame 1992",SPHEROID["GRS 1980",6378137.0,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6651"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["m",1.0],AXIS["Geocentric X",OTHER],AXIS["Geocentric Y",EAST],AXIS["Geocentric Z",NORTH],AUTHORITY["EPSG","4914"]]');
+
+UPDATE spatial_ref_sys set proj4text = '+proj=lcc +lat_1=17.5 +lat_2=29.5 +lat_0=12 +lon_0=-102 +x_0=2500000 +y_0=0 +ellps=WGS84 +units=m +no_defs' where srid = 94914; 
