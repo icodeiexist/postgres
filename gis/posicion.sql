@@ -5,7 +5,7 @@ nombre varchar
 
 
 CREATE TABLE public.posicion (
-id primary key,
+id int primary key,
 dispositivo_id int,
 hora timestamp default now(),
 lon float,
@@ -32,3 +32,5 @@ CREATE TRIGGER update_point AFTER INSERT
 ON posicion
 FOR EACH ROW
 EXECUTE PROCEDURE public.update_point();
+
+ALTER TABLE posicion DISABLE TRIGGER update_point;
