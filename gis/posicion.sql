@@ -1,7 +1,8 @@
-CREATE TABLE public.dispositivo (
+/* CREATE TABLE public.dispositivo (
 id serial primary key,
 nombre varchar
 );
+*/
 
 
 CREATE TABLE public.posicion (
@@ -33,4 +34,4 @@ ON posicion
 FOR EACH ROW
 EXECUTE PROCEDURE public.update_point();
 
-ALTER TABLE posicion DISABLE TRIGGER update_point;
+--ALTER TABLE posicion DISABLE TRIGGER update_point;
